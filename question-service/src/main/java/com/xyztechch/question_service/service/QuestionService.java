@@ -62,6 +62,7 @@ public class QuestionService {
         for (Question question : questions) {
              QuestionDto questionDto = new QuestionDto();
              questionDto.setQuestionTitle(question.getQuestionTitle());
+             questionDto.setCategory(question.getCategory());
              questionDto.setOption1(question.getOption1());
              questionDto.setOption2(question.getOption2());
              questionDto.setOption3(question.getOption3());
