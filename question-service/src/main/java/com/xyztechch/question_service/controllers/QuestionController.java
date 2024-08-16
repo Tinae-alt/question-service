@@ -37,7 +37,9 @@ public class QuestionController {
 
     //generate
     @GetMapping("generate")
-    public ResponseEntity<List<Integer>> generateQuestionForQuiz(@RequestParam String category, @RequestParam int numQ){
+    public ResponseEntity<List<Integer>> generateQuestionForQuiz(@RequestParam String category, @RequestParam int numQ)
+    {
+        log.info("===Category==={},{}",category,numQ);
         return questionService.getQuestionsForQuiz(category,numQ);
     }
     //getQuestions(quiz id)
